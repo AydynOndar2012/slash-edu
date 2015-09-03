@@ -16,7 +16,12 @@ module.exports = function (karmaConfig) {
     preprocessors: {
       'modules/*/client/views/**/*.html': ['ng-html2js']
     },
+ ngHtml2JsPreprocessor: {
+      moduleName: 'mean',
 
+      cacheIdFromPath: function (filepath) {
+        return filepath;
+      },
     ngHtml2JsPreprocessor: {
       moduleName: 'mean',
 
